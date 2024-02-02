@@ -6,7 +6,6 @@ terraform {
     dynamodb_table = "dev-lock"
   }
 }
-
 provider "aws" {
   region = "us-east-1"
 }
