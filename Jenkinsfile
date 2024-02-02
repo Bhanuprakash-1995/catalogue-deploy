@@ -27,8 +27,7 @@ pipeline {
             steps {
                 sh """
                     cd terraform
-                    echo "${params.environment}/backend.tf"
-                    # terraform init --backend-config=${params.environment}/backend.tf 
+                    terraform init --backend-config=${params.environment}/backend.tf -reconfigure 
                 """
             }
         }
