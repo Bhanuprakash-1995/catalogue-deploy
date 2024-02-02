@@ -23,11 +23,12 @@ pipeline {
                 """
             }
         }
-        stage('Terraform Initializtion') {
+        stage('Terraform Initialization') {
             steps {
                 sh """
                     cd terraform
-                    terraform init --backend-config=${params.environment}/backend.tf 
+                    echo "${params.environment}/backend.tf"
+                    # terraform init --backend-config=${params.environment}/backend.tf 
                 """
             }
         }
