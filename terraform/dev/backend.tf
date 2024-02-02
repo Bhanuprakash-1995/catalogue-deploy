@@ -1,12 +1,4 @@
-terraform {
-  backend "s3" {
-    bucket         = "roboshop-01"
-    key            = "dev"
-    region         = "us-east-1"
-    dynamodb_table = "roboshopapp-lock"
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-}
+bucket         = "dev-backend-roboshopapp"
+key            = "shipping"
+region         = "us-east-1"
+dynamodb_table = "dev-lock"
