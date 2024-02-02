@@ -23,7 +23,7 @@ pipeline {
                 """
             }
         }
-        stage('Print version') {
+        stage('Terraform Initializtion') {
             steps {
                 sh """
                     cd terraform
