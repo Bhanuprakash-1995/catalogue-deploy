@@ -4,26 +4,22 @@ pipeline {
             label 'AGENT-1'
         }
     }
-    // environment { 
-    //     packageVersion = ''
-    //     nexusUrl = '172.31.8.104:8081'
-    // }
      options {
         timeout(time: 1, unit: 'HOURS') 
         disableConcurrentBuilds()
     }
-     parameters {
+    parameters {
         string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
-        string(name: 'environment', defaultValue: 'dev', description: 'What is the environment?')
-
+        string(name: 'environment', defaultValue: 'dev', description: 'What is environment?')
     }
+
     // build
     stages {       
-        stage('Print varsion') {
+        stage('Print version') {
             steps {
                 sh """
-                    echo "Version: ${parms.version}"
-                    echo "Environment: ${parms.environment}"
+                    echo "version: ${params.version}"
+                    echo "environment: ${params.environment}"
                 """
             }
         }
