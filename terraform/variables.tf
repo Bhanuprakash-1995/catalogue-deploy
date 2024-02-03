@@ -1,9 +1,11 @@
-variable "common_tags" {
-  default = {
-    Project     = "roboshop"
-    Environment = "dev"
-    Terraform   = "true"
-  }
+variable "project_name" {
+  type    = string
+  default = "roboshop"
+}
+
+variable "environment" {
+  type    = string
+  default = "dev"
 }
 
 variable "tags" {
@@ -11,18 +13,17 @@ variable "tags" {
     Component = "catalogue"
   }
 }
-
-variable "project_name" {
-  default = "roboshop"
-}
-variable "environment" {
-  default = "dev"
+variable "common_tags" {
+  default = {
+    Project     = "roboshop"
+    Enviornment = "dev"
+    Terraform   = "true"
+  }
 }
 
 variable "zone_name" {
-  default = "daws76s.online"
+  default = "daws86s.online"
 }
-
 variable "app_version" {
 
 }
