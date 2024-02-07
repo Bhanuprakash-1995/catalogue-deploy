@@ -35,7 +35,7 @@ pipeline {
             }
         }
         stage('Terraform Plan') {
-             when{
+            when{
                 expression {
                     params.Create
                 }
